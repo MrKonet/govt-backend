@@ -3,7 +3,6 @@ const { MongoClient } = require('mongodb');
 require('dotenv').config();
 const cors = require('cors'); // Correctly require the CORS package
 const app = express();
-const port = 3000;
 
 // Initialize CORS middleware
 
@@ -48,7 +47,7 @@ app.get('/', (req, res) => {
       });
   });
 
-  app.listen(process.env.PORT, '0.0.0.0', () => {
-    console.log(`Server is running on port ${port}`);
+  const port = process.env.PORT || 3000;
+  app.listen(port, '0.0.0.0', () => {
+      console.log(`Server is listening on port ${port}`);
   });
-  
