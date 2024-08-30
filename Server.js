@@ -36,16 +36,7 @@ app.post('/addParticipant', async (req, res) => {
         await client.close();
     }
 });
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Hello, this is the JSON output from the home page!',
-        status: 'success',
-        data: {
-          key1: 'value1',
-          key2: 'value2'
-        }
-      });
-  });
+
 
   const port = process.env.PORT || 3000;
   app.listen(port, '0.0.0.0', () => {
