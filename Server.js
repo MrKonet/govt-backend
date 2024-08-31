@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors)
 app.use(cors({
-    origin: 'https://govt-alert-main.vercel.app', // Replace with your frontend URL
+    origin: 'https://govt-alert-frontend.vercel.app/', // Replace with your frontend URL
     methods: ['GET', 'POST', 'OPTIONS'],
     credentials:true
   }));
